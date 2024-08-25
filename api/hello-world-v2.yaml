@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Hello World!
+  description: Hello World!
+  version: 1.0.0
+servers:
+  - url: 'https://hello-world.omegapoint.se'
+paths:
+  /hello-world:
+    get:
+      summary: Returns hello world
+      responses:
+        200:
+          $ref: '#/components/responses/HelloWorldResponse'
+      x-amazon-apigateway-integration:
+        httpMethod: "POST"
+        uri: HelloWorldHandler
+
+components:
+  responses:
+    HelloWorldResponse:
+      description: A Hello world response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              message:
+                type: string

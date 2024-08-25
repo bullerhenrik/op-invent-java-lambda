@@ -1,0 +1,6 @@
+# Ignore artifacts:
+cdk.out
+node_modules/
+package.json
+package-lock.json
+README
