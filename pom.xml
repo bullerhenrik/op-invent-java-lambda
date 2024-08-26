@@ -95,7 +95,7 @@
                 <version>6.6.0</version>
                 <configuration>
                     <inputSpec>
-                        ${project.basedir}/api/hello-world-v2.yaml
+                        ${project.basedir}/api/hello-world-v1.yaml
                     </inputSpec>
                     <generatorName>java</generatorName>
                     <modelPackage>se.omegapoint.helloworld.dto

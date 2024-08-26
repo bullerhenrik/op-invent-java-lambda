@@ -16,7 +16,7 @@ export class NewApiStack extends cdk.Stack {
 
     new OpenApiGatewayToLambda(this, 'HelloWorldAPI', {
       apiDefinitionAsset: new Asset(this, 'HelloWorldApiSpecAsset', {
-        path: path.join('../api/hello-world-v2.yaml'),
+        path: path.join('../api/hello-world-v1.yaml'),
       }),
       apiIntegrations: [
         {
