@@ -1,5 +1,5 @@
 {
-  "body": "Hello World!",
+  "body": "{\"message\":\"Hello World!\"}",
   "statusCode": 200,
   "headers": {
     "Cache-Control": "max-age=0",

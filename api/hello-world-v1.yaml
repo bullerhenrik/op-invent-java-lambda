@@ -11,19 +11,20 @@ paths:
       summary: Returns hello world
       responses:
         200:
-          $ref: '#/components/responses/HelloWorldResponse'
+          description: The response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HelloWorldResponse'
+
       x-amazon-apigateway-integration:
-        httpMethod: "POST"
+        httpMethod: "GET"
         uri: HelloWorldHandler
 
 components:
-  responses:
+  schemas:
     HelloWorldResponse:
-      description: A Hello world response
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              message:
-                type: string
+      type: object
+      properties:
+        message:
+          type: string
