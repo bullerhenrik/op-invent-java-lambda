@@ -1,16 +1,16 @@
 # Running Java on AWS Lambda: learnings and pitfalls
 TODO: short description
 ## Optimization
-TODO: short description
+Cold start before optimization: 6s
 
 ### memorySize
 TODO: short description
 
 ### snapStart
-TODO: short description
+Cold start after implementation: 3s
 
 ### Dependency initialization
-TODO: short description
+Cold start after implementation: 1s
 
 ## AWS CDK
 
