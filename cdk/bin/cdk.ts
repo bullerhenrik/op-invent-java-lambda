@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register'
-import * as cdk from 'aws-cdk-lib'
-import { ApiStack } from '../lib/api-stack'
+import "source-map-support/register"
+import * as cdk from "aws-cdk-lib"
+import { ApiStack } from "../lib/api-stack"
 
 const app = new cdk.App()
 
-new ApiStack(app, 'ApiStack', {
-  version: '1.0',
+new ApiStack(app, "ApiStack", {
+  version: "1.0",
 })

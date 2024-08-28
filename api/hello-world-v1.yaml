@@ -19,7 +19,10 @@ paths:
 
       x-amazon-apigateway-integration:
         httpMethod: "GET"
-        uri: HelloWorldHandler
+        credentials:
+          Fn::Sub: "${ApiLambdaRole.Arn}"
+        uri:
+          Fn::Sub: "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloWorldLambda.Arn}:current/invocations"
 
 components:
   schemas:
