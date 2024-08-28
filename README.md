@@ -8,7 +8,7 @@
 
 # 1. memorySize
 
-## Use AWS Lambda Power Tuning to balances speed (duration) and cost.
+## AWS Lambda Power Tuning
 
 ![img_1.png](img_1.png)
 _https://docs.aws.amazon.com/lambda/latest/operatorguide/profile-functions.html_
