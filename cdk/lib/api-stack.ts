@@ -15,6 +15,7 @@ export class ApiStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: ApiStackProps) {
     super(scope, id, props)
 
+    // Lambda
     const lambda = new aws_lambda.Function(this, "HelloWorldLambda", {
       runtime: aws_lambda.Runtime.JAVA_21,
       handler: "se.omegapoint.HelloWorldHandler",
@@ -22,17 +23,21 @@ export class ApiStack extends cdk.Stack {
       memorySize: 2048,
       snapStart: SnapStartConf.ON_PUBLISHED_VERSIONS,
     })
+
     ;(lambda.node.defaultChild as CfnFunction).overrideLogicalId("HelloWorldLambda")
 
     lambda.addAlias("current")
 
+    // Role
     const apiRole = new Role(this, "ApiLambdaRole", {
       assumedBy: new ServicePrincipal("apigateway.amazonaws.com"),
     })
+
     ;(apiRole.node.defaultChild as CfnRole).overrideLogicalId("ApiLambdaRole")
 
     lambda.grantInvoke(apiRole)
 
+    // Api Gateway
     const apiAsset = new Asset(this, "ApiSpecAsset", {
       path: path.join("../api/hello-world-v1.yaml"),
     })
