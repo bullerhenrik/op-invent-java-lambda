@@ -51,3 +51,6 @@ Snapstart)
 
 - https://docs.aws.amazon.com/solutions/latest/constructs/aws-openapigateway-lambda.html
 - https://github.com/awslabs/aws-solutions-constructs/tree/main/source/patterns/%40aws-solutions-constructs/aws-apigateway-lambda
+
+## Link to this repo:
+![qrcode_github.com.png](qrcode_github.com.png)
