@@ -1,16 +1,16 @@
-![op_invent](op-invent-16x10_title.png)
+![op_invent](img/op-invent-16x10_title.png)
 
 # TL;DR
 
 ## Cold start before optimization: 6s
 
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 # 1. memorySize
 
 ## AWS Lambda Power Tuning
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 _https://docs.aws.amazon.com/lambda/latest/operatorguide/profile-functions.html_
 
 ### Cold start time saved: ?
@@ -42,7 +42,7 @@ API Gateway --> Lambda using `SpecRestApi` from aws-cdk-lib/aws-apigateway*
 - https://medium.com/@gwieser/solving-a-nightmare-aws-cdk-openapi-and-api-gateway-a1b6fdc1fd24
 
 
-![img_5.png](img_5.png)
+![spec_rest_api..png](img/spec_rest_api.transparent.png)
 
 *`OpenApiGatewayToLambda` from
 @aws-solutions-constructs/aws-openapigateway-lambda does have less overhead, but
@@ -53,4 +53,4 @@ Snapstart)
 - https://github.com/awslabs/aws-solutions-constructs/tree/main/source/patterns/%40aws-solutions-constructs/aws-apigateway-lambda
 
 ## Link to this repo:
-![qrcode_github.com.png](qrcode_github.com.png)
+![qrcode_github.com.png](img/qrcode_github.com.png)
