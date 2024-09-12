@@ -42,7 +42,7 @@ export class OpenApiGatewayToLambda extends Construct {
         runtime: apiIntegration.runtime,
         handler: apiIntegration.handler,
         code: apiIntegration.code,
-        memorySize: apiIntegration.memorySize ?? undefined,
+        memorySize: apiIntegration.memorySize ?? 128,
         snapStart: apiIntegration.snapStart ?? undefined,
       })
 
