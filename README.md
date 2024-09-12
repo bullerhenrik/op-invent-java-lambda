@@ -17,6 +17,8 @@ _https://docs.aws.amazon.com/lambda/latest/operatorguide/profile-functions.html_
 
 # 2. snapStart
 
+![img.png](img.png)
+
 ### Cold start time saved: 3s
 
 _https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html_
