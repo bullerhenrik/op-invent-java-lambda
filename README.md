@@ -8,6 +8,10 @@
 
 # 1. memorySize
 
+#### _"How can less be more? more is more"_ - Yngwie Malmsteen
+
+#### _"Generally, CPU-bound Lambda functions see the most benefit when memory increases, whereas network-bound see the least."_ - AWS Docs
+
 ## AWS Lambda Power Tuning
 
 ![img_1.png](img/img_1.png)
@@ -16,6 +20,8 @@ _https://docs.aws.amazon.com/lambda/latest/operatorguide/profile-functions.html_
 ### Cold start time saved: ?
 
 # 2. snapStart
+
+![img_1.png](img_1.png)
 
 ![img.png](img.png)
 
@@ -26,6 +32,8 @@ _https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html_
 # 3. Priming/Dependency initialization
 
 ### Cold start time saved: 2s
+
+- https://docs.aws.amazon.com/lambda/latest/operatorguide/static-initialization.html
 
 - https://aws.amazon.com/blogs/compute/reducing-java-cold-starts-on-aws-lambda-functions-with-snapstart/
 
