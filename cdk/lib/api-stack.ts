@@ -19,12 +19,19 @@ export class ApiStack extends cdk.Stack {
     const lambda = new aws_lambda.Function(this, "HelloWorldLambda", {
       runtime: aws_lambda.Runtime.JAVA_21,
       handler: "se.omegapoint.HelloWorldHandler",
-      code: aws_lambda.Code.fromAsset(path.join(__dirname, `../../target/op-invent-java-lambda-${props?.version}-SNAPSHOT.jar`)),
+      code: aws_lambda.Code.fromAsset(
+        path.join(
+          __dirname,
+          `../../target/op-invent-java-lambda-${props?.version}-SNAPSHOT.jar`,
+        ),
+      ),
       memorySize: 2048,
       snapStart: SnapStartConf.ON_PUBLISHED_VERSIONS,
     })
 
-    ;(lambda.node.defaultChild as CfnFunction).overrideLogicalId("HelloWorldLambda")
+    ;(lambda.node.defaultChild as CfnFunction).overrideLogicalId(
+      "HelloWorldLambda",
+    )
 
     lambda.addAlias("current")
 
@@ -41,7 +48,9 @@ export class ApiStack extends cdk.Stack {
     const apiAsset = new Asset(this, "ApiSpecAsset", {
       path: path.join("../api/hello-world-v1.yaml"),
     })
-    const apiData = Fn.transform("AWS::Include", { location: apiAsset.s3ObjectUrl })
+    const apiData = Fn.transform("AWS::Include", {
+      location: apiAsset.s3ObjectUrl,
+    })
 
     new SpecRestApi(this, "HelloWorldApi", {
       apiDefinition: ApiDefinition.fromInline(apiData),
