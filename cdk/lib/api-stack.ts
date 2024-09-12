@@ -22,7 +22,7 @@ export class ApiStack extends cdk.Stack {
           path: path.join("../api/hello-world-v1.yaml"),
         }),
       },
-      apiIntegration: [
+      apiIntegrations: [
         {
           id: "HelloWorldLambda",
           runtime: aws_lambda.Runtime.JAVA_21,
